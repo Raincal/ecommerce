@@ -1,0 +1,23 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <div class="container">
+    <button class="navbar-toggler hidden-sm-up"
+            type="button"
+            (click)="isCollapsed = !isCollapsed">
+      &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" [collapse]="isCollapsed">
+      <a class="navbar-brand" [routerLink]="['/']">{{appName}}</a>
+
+      <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" [routerLink]="['/']">
+          Home <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-item nav-link" [routerLink]="['/products']">Products</a>
+        <a class="nav-item nav-link" [routerLink]="['/checkout']">Checkout</a>
+        <a class="nav-item nav-link" [routerLink]="['/']">Sign out</a>
+      </div>
+
+      <db-cart-menu></db-cart-menu>
+    </div>
+  </div>
+</nav>
